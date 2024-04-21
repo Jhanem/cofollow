@@ -1,3 +1,31 @@
+<?php
+    session_start();
+
+    include("registration.php");
+
+    if ($_SERVER['REQUEST_METHOD'] == "POST") {
+        $email = $_POST['email'];
+        $password = $_POST['psw'];
+        $number = $_POST['phone'];
+
+        if (!empty($email) && !empty($password) && !is_numeric($email)) {
+
+            $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
+            $query = "INSERT INTO form (email, password, number) VALUES (?, ?, ?)";
+            $stmt = mysqli_prepare($con, $query);
+            mysqli_stmt_bind_param($stmt, 'sss', $email, $hashedPassword, $number);
+            mysqli_stmt_execute($stmt);
+            mysqli_stmt_close($stmt);
+
+            header("Location: /Co-Follow/Authentication/Login/Login.php");
+            exit();
+        } else {
+            echo "<script type='text/javascript'> alert('Please enter valid information')</script>";
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <html>
