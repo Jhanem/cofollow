@@ -18,7 +18,7 @@
             mysqli_stmt_execute($stmt);
             mysqli_stmt_close($stmt);
 
-            header("Location: /Co-Follow/Login.php");
+            header("Location: /Co-Follow/Login/index.php");
             exit();
         } else {
             echo "<script type='text/javascript'> alert('Please enter valid information')</script>";
