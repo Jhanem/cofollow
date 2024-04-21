@@ -1,3 +1,40 @@
+<?php
+session_start();
+
+include("C:/xampp/htdocs/Co-Follow/Log-in&Signup/Signup/registration.php");
+
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    $email = $_POST['email'];
+    $password = $_POST['psw'];
+
+    if (!empty($email) && !empty($password) && !is_numeric($email)) {
+
+        $query = "SELECT * FROM form WHERE email = '$email' LIMIT 1";
+        $result = mysqli_query($con, $query);
+
+        if ($result && mysqli_num_rows($result) > 0) {
+            $user_data = mysqli_fetch_assoc($result);
+
+            // Check if the entered password matches the stored password
+            if ($user_data['password'] == $password) {
+                // Passwords match, set session variables or perform other login actions
+                $_SESSION['user_id'] = $user_data['id'];
+                $_SESSION['user_email'] = $user_data['email'];
+
+                echo "<script>alert('Login successful'); window.location.href='/Co-Follow/Co-Follow Homepage/index.php';</script>";
+                exit();
+            } else {
+                echo "<script>alert('Incorrect password');</script>";
+            }
+        } else {
+            echo "<script>alert('User not found');</script>";
+        }
+    } else {
+        echo "<script>alert('Please enter valid information');</script>";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
