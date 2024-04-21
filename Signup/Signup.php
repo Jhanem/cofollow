@@ -5,7 +5,7 @@
 
     if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $email = $_POST['email'];
-        $password = $_POST['psw'];
+        $password = $_POST['password'];
         $number = $_POST['phone'];
 
         if (!empty($email) && !empty($password) && !is_numeric($email)) {
@@ -18,7 +18,7 @@
             mysqli_stmt_execute($stmt);
             mysqli_stmt_close($stmt);
 
-            header("Location: /Co-Follow/Authentication/Login/Login.php");
+            header("Location: /Co-Follow/Login.php");
             exit();
         } else {
             echo "<script type='text/javascript'> alert('Please enter valid information')</script>";
