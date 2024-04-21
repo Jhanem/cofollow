@@ -1,0 +1,30 @@
+#upload1{
+    background-color: rgb(240, 50, 50);
+    font-size: 1rem;
+    padding: 0.4vw;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    width: 9rem;
+    color: white;
+    font-family: 'Kanit', sans-serif;
+    position: relative;
+    bottom: -2rem;
+    left: 50%; /* Change left position to 50% */
+    transform: translateX(-50%); /* Center horizontally */
+}
+
+#upload1:hover {
+    background-color: #45a049; /* Darker green color on button hover */
+}
+
+/* Exit Button */
+#exit1{
+    position: absolute;
+    width: auto;
+    height: 2rem;
+    cursor: pointer;
+    z-index: 50;
+    top: 1rem;
+    right: 1.5rem;
+}

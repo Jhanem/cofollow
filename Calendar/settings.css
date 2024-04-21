@@ -1,0 +1,92 @@
+
+.settings-widget {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+}
+
+.settings-widget img { /* This are images inside the the thing*/
+    width: 15px;
+    height: 15px;
+}
+
+.settings-widget-container {
+    position: absolute;
+    top: -509px;
+    right: 10px;
+}
+
+#settings-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+    right: 10px;
+
+}
+
+.down-icon {    
+    border-radius: 50%; 
+    transition: background-color 0.8s ease;
+    filter: invert(100%);
+    transform: scale(1.5); 
+}
+
+.down-icon:hover {
+    cursor: pointer;
+    background-color: gray;
+}
+
+
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    border-radius: 20px;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    top: 35px;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 20px;
+    color: #333;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown-content.reposition-text {
+    align-items: center;
+    padding: 10px;
+    text-align: left;
+    top: -35;
+    left: -160px;
+}
+
+.dropdown-content.reposition-text a img {
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+.dropdown-content.reposition-text a {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    text-align: center;
+    height: 50px;
+}
+
+.show {
+    display: block;
+}

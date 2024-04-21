@@ -1,0 +1,215 @@
+#left_container{
+  color: white;
+  width: 40%;
+  position: absolute;
+  left: 2%;
+  height: 100%;
+  
+}
+
+#slides {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  overflow: auto!important;
+}
+
+/* Remove background of the scrollbar thumb */
+.simplebar-scrollbar:before {
+  background-color: #685d5d!important;
+  top: 30%!important;
+}
+
+/* Set color to the rounded border-radius area */
+.simplebar-scrollbar:before {
+  border-radius: 5px;
+  background-color: #996633; /* Adjust color as needed */
+}
+
+/* Customize the scrollbar track */
+.simplebar-track {
+  background-color: rgba(255, 255, 255, 0); /* Set track color with transparency */
+  height: 80%; /* Adjust height as needed */
+}
+
+.slide-content{
+  position: relative;
+  overflow: auto;
+
+}
+
+.slide-content h2{
+  position: relative;
+  font-size: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+.element {
+  margin-bottom: 30px!important;
+  width: 80%;  /* Element width set to 100% of its parent */
+  height: 13vw;  /* Adjust height as needed */
+  border-radius: 10px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  background-size: cover; /* Ensure the background image covers the entire element */
+}
+
+
+
+#elementid{
+  background-image:none;
+}
+
+.element::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.637); /* Adjust the color and opacity as needed */
+}
+
+.datedata{
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.89);
+  width: 100%;
+  bottom: 0;
+  height: 50px;
+  border-radius: 60% 50% 0 0; /* Border radius for top left and right corners */
+  display: hidden;
+  opacity: 0; /* Start with transparency */
+  transition: opacity 0.5s ease; /* Apply transition effect */
+
+}
+
+.datedata h4{
+  text-align: center;
+  color: black;
+
+}
+
+.element:hover .datedata {
+  opacity: 1; /* Fully opaque when parent is hovered */
+}
+
+.delete {
+  width: 10%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  background-color: rgb(26, 25, 25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+}
+
+.delete img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.element h3{
+  text-align: center; /* Center-align the text */
+  margin: auto; /* Center the element horizontally */
+  top: 20%;
+  font-size: 2rem;
+  position: absolute; /* Position the element absolutely */
+  left: 0; /* Place the element at the left edge */
+  right: 0; /* Place the element at the right edge */
+}
+
+/* Existing CSS styles (unchanged) */
+select {
+  padding: 5px; /* Optional: Add padding */
+  font-family: inherit; 
+  display: block;
+  border-color: rgba(12, 10, 10, 0.938); 
+  background-color: transparent;
+  color: white;
+  font-size: 1.5rem;
+  position: relative;
+  margin-left: 30px;
+  border-bottom: 0.2rem solid #ffffff; /* Add a bottom border */
+}
+
+select :hover{
+  border-color: rgba(12, 10, 10, 0.815); 
+}
+  
+select option {
+  background-color:bisque; /* Remove background color */
+  padding: 5px; /* Add padding */
+  color: black;
+  outline: none;
+  cursor: pointer; 
+  border-bottom: 1px solid #ccc; /* Add a bottom border */
+}
+  
+
+select option:focus {
+  color: black;
+  outline: none; /* Remove default outline */
+}
+
+#right_container1{
+  position: absolute;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  z-index: 500;
+}
+
+
+.event_description{
+  width: 90%;
+  height: 100%;
+  transform: translateX(5%);
+
+}
+
+.description{
+  height: 100%;
+
+}
+
+.description p {
+  width: 90%;
+  height: 35%;
+  font-size: 25px;
+  transform: translateX(5%);
+}
+
+
+#calendar1{
+  background-color: rgba(255, 0, 0, 0);
+  height: 30%;
+  position: relative;
+  text-align: center;
+
+}
+
+
+#calendar2{
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.753);
+  color: white;
+  position: absolute;
+}
+
+
+
+#calendar1 img{
+  position: relative;
+}
+
+.calendar1 h1 {
+  z-index: 200;
+}
