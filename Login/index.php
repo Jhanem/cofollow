@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include("C:/xampp/htdocs/Co-Follow/Log-in&Signup/Signup/registration.php");
+include("registration.php");
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $email = $_POST['email'];
