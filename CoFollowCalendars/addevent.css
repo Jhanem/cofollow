@@ -1,0 +1,221 @@
+.addeventclick {
+    background-color: rgba(20, 20, 20, 0.877); /* Semi-transparent black background */
+    width: 100%;
+    height: 100%;
+    top: 50px;
+    position: absolute; /* Fixed position to cover the entire viewport */
+    z-index: 9999; /* Higher z-index to ensure it appears above other content */
+    color: #e03d3d;
+}
+
+
+.addeventcontent {
+    padding: 20px;
+    position: fixed;
+    transform: translateY(1%)!important;
+    top: 1%;
+    border-radius: 10px;
+    background-color:wheat;
+    transform: translateX(45%);
+    left: 22%;
+    width: 50vw; /* Adjust the width as needed */   
+
+    align-items: center; /* Align elements vertically */
+
+}
+
+#addeventcontent{
+    top: 5%;
+}
+
+form{
+    width: 50vw;
+    position: relative;
+}
+
+
+.addeventcontent h1 {
+    text-align: center;
+    width: 100%;
+    position: relative;
+
+}
+
+.addeventcontent label{
+    font-size: 1.7rem;
+    position: relative;
+    color: #e03d3d;
+}
+
+.date, #set_title{
+    vertical-align: bottom; /* Align label text to bottom */
+}
+
+.addeventcontent input {
+    vertical-align: bottom!important; /* Align input field to bottom */
+}
+  
+#photoInput{
+    width: 40%;
+    position: a;
+    font-size: 20px;
+    border-bottom:  #e03d3d00;
+}
+
+.addeventcontent input{
+
+    width: 35%;
+    margin-left: 20px;
+    border: none; /* Remove border */
+    outline: none;
+    border-bottom: 2px solid #e03d3d;
+    background-color: transparent; /* Make background transparent */
+    font-size: 1.5rem;
+    color: #000000;
+    font-family: "Kanit", sans-serif; /* Set the font family */
+}
+
+.date input{
+    width: 10%!important;
+
+}
+
+#month, #year1, #year{
+    width: 15%!important;
+}
+
+#calendarInput{
+    margin-left: 5rem;
+}
+
+#set_title {
+    width: 30vw;
+}
+
+#upload {
+    background-color: rgb(240, 50, 50);
+    font-size: 1rem;
+    padding: 0.4vw;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    width: 7rem;
+    color: white;
+    font-family: 'Kanit', sans-serif;
+    position: relative;
+    bottom: -2rem;
+    left: 50%; /* Change left position to 50% */
+    transform: translateX(-50%); /* Center horizontally */
+}
+
+
+
+.addevent {
+    background-color: rgb(240, 50, 50);
+    font-size: 1rem;
+    padding: 0.4vw;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    width: 7rem;
+    color: white;
+    font-family: 'Kanit', sans-serif;
+    position: fixed;
+    bottom: -2vw;
+    right: 11rem; /* Adjust this value to change the distance from the right */
+}
+
+input[name="month"]::placeholder,
+input[name="year" ]::placeholder {
+  text-align: center!important;
+}
+
+
+#upload:hover {
+    background-color: #45a049; /* Darker green color on button hover */
+}
+
+.description {
+    margin-top: 20px;
+}
+
+.description label {
+    display: block;
+}
+
+.setdesc {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+    font-size: 16px;
+    position: relative;
+    transform: translateX(2%);
+    font-family: "Kanit", sans-serif; /* Set the font family */
+    height: 10vw; /* Add this line to set the height */
+}
+
+.char-count {
+    position: absolute;
+    padding: 0 5px;
+    bottom:  0px;
+    width: 55%!important;
+    font-size: 12px;
+    margin-left: 10px;
+}
+  
+.event-details label {
+    display: inline-block;
+}
+  
+.event-details h5,
+  .event-details .char-count {
+    display: inline-block;
+}
+  
+
+.setdesc::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.setdesc:focus {
+    outline: none;
+    box-shadow: 0 0 2px 1px rgba(223, 25, 25, 0.5);
+}
+
+
+/* Exit Button */
+#exit{
+    position: absolute;
+    width: auto;
+    height: 2rem;
+    cursor: pointer;
+    z-index: 50;
+    top: 1rem;
+    right: 1.5rem;
+}
+
+
+/* Exit Button */
+.exit{
+    position: absolute;
+    width: auto;
+    height: 2rem;
+    cursor: pointer;
+    z-index: 50;
+    top: 1rem;
+    right: 1.5rem;
+}
+
+
+.addevent{
+    position: absolute;
+}

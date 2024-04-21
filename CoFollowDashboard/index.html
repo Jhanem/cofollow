@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/png" href="/Images/Logo.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=League+Spartan:wght@600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="mobile.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+        <link rel="stylesheet" href="settings.css">
+        <title>CoFollow</title>
+    </head>
+    <body>
+        <header id="header">
+            <div class="logo">
+                <b><a class="title">CoFollow</a></b>
+                <b><a>| </a><a> Dashboard</b> </a>
+            </div>
+            <div class="settings-widget">
+                <button id="settings-btn">
+                    <img src="icons/down.png" alt="Down Arrow" class="down-icon">
+                </button>
+                <div class="dropdown-content" id="dropdown-content">
+                    <a href="#">
+                        <img src="icons/user.png" alt="User" width="15" height="19">
+                        Profile
+                    </a>
+                    <a href="#">
+                        <img src="icons/settings.png" alt="Settings" width="15" height="19">
+                        Settings
+                    </a>
+                    <a href="#">
+                        <img src="icons/logout.png" alt="Logout" width="15" height="19">
+                        Log-out
+                    </a>
+                </div>
+            </div>
+    
+        </header>
+        <section class="userinfo_section">
+            <div class="userinfo">
+                <div class="profile-picture" id="profile-picture">
+                    <img src="https://lh3.googleusercontent.com/a-/ALV-UjV0i8aQTnNjdM3Rpw0UQmJzbEbqHcTnNiSMoG_2rYrMvHs" alt="" id="profile-image">
+                </div>
+                <div id="admin-message" style="display: none"><a>Admin Account</a></div>
+                <div class="welcomeMessage" id="welcomeMessage"><h3><?php echo $greeting; ?></h3></div>
+            </div>
+        </section>
+
+        
+        <div class="more" data-aos="fade-up">
+            <div class="ourservices">
+                <h1>Explore</h1>
+                <div class="services" data-aos="fade-up" >
+                    <div class="calendar" onclick="window.location.href='/CoFollowCalendars/calendar.html';" style="cursor: pointer;">
+                        <div class="img">
+                            <img class="calendarimg" src="/Images/calendar.png">
+                        </div>
+                        <h2>Event Calendar</h2>
+                        <p>Provides students with the opportunity to actively participate in and be involved with forthcoming events, fostering their engagement and interaction within the community.</p>
+                    </div>
+                    
+                    <div class="clubs" onclick="window.location.href='/Clubs/clubs.html';" >
+                        <div class="img">
+                            <img class="clubimg" src="/Images/clubs.png">
+                        </div>
+                        <h2>Clubs</h2>
+                        <p>Clubs provide an avenue for students to delve into the diverse array of extracurricular activities available at Liceo de Cagayan University.</p>
+                    </div>
+
+                    <div class="sms" onclick="window.location.href='/CoFollowSMS/index.html';" >
+                        <div class="img" >
+                            <img class="smsimg" src="/Images/sms.png">
+                        </div>
+                        <h2>SMS</h2>
+                        <p>Liceo students receive event notifications via SMS for timely updates on upcoming activities and engagements.</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <script src="fetch_profile.js"></script>
+        <script src="settings.js"></script>
+        <script src="message.js"></script>
+        <script src="profile.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script src="header.js"></script>
+        <script>
+          AOS.init();
+        </script>
+    </body>
+</html> 
+
+
+
+

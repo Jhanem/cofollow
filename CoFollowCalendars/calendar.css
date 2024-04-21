@@ -1,0 +1,168 @@
+
+.right_container {
+    position: relative;
+    left: 45%;
+    width: 52vw;
+    height: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: wheat; /* Set background color to transparent */
+}
+
+
+
+.calendar {
+    width: 50vw;
+    transform: translate(2%, 5%);
+    margin-bottom: 5vw; /* Add margin to the bottom of the calendar */
+    position: relative;
+}
+
+
+#ToDolist{
+    right: 1rem;
+    width: 8rem;
+}
+
+.addevent:hover{
+    background-color:rgb(53, 158, 32);
+    color: black;
+}
+
+
+.monthhead{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+    width: 30vw;
+    transform: translateX(30%);
+}
+
+/* Default styling */
+.weekdays {
+    list-style-type: none;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    top: 0.5rem;
+
+}
+
+
+
+.weekdays li {
+    display: inline-block;
+    padding: 1.1%;
+    width: 14.28%; /* Set the same width value as .days li */
+    font-size: 15px;
+    border-radius: 8px;
+    position: relative;
+    color: black;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.days li {
+  display: inline-block;
+  margin: 1%;
+  padding: 1.1%;
+  width: 10%;
+  font-size: 15px;
+  border-radius: 8px;
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  flex-grow: 1;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.637);
+}
+
+.days {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.days li:hover{
+    color: rgb(0, 0, 0);
+    background-color: rgb(204, 169, 99);
+}
+
+
+.current-day {
+    background-color: rgb(245, 158, 59)!important;
+    color: black!important;
+}
+
+.current-day:hover{
+
+    background-color: rgb(207, 141, 18)!important;
+}
+
+#prevMonth,
+#nextMonth {
+    opacity: 0.6;
+    background-image: url('icons/right-arrow.png');
+    background-size: contain;
+    width: 1.5rem; /* Set the width of the arrow icon */
+    height: 3rem; /* Maintain aspect ratio */
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    position: static;
+    background-color: transparent;
+    cursor: pointer; /* Add this line to set cursor to pointer */
+}
+
+#prevMonth:hover,
+#nextMonth:hover{
+    opacity: 1;
+}
+
+#prevMonth {
+    transform: scaleX(-1);
+}
+
+
+
+
+/* Months of days design */
+.next-month,
+.prev-month {
+    opacity: 0;
+    pointer-events: none!important;
+}
+
+.days li.prev-month:nth-child(n+3) {
+    opacity: 0.6;
+    pointer-events: none!important;
+}
+/* Hide excess next month days */
+.days li.next-month:nth-last-child(n+8) {
+    opacity: 0.5;
+    pointer-events: none!important;
+}
+
+.weekday:nth-child(6),  /* Target 6th child (Saturday) */
+.weekday:nth-child(7) {  /* Target 7th child (Sunday) */
+  color: red !important;
+}
+
+
+
+
+#calendar-info {
+    display: none;
+    position: fixed;
+    background-color: rgba(241, 241, 241, 0.8);
+    color: rgb(0, 0, 0);
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 999;
+    /* Add any other styles you want */
+}
+

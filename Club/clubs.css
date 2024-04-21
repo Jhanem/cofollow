@@ -1,0 +1,194 @@
+.clubsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Change to 1 column for mobile */
+  grid-gap: 20px;
+  width: 90%;
+  position: relative;
+  top: 13vw;
+  transform: translate(5%);
+
+}
+
+@media (max-width: 608px) { /* Adjust the width value based on your preference */
+  .clubsContainer {
+    grid-template-columns: repeat(1, 1fr); /* Change back to 3 columns for larger screens */
+    top: 36vw;
+  }
+
+  .centered {
+    background-color: #772b2b;
+    position: relative;
+    width: 100%;
+    height: 80vw!important;  
+    border-radius: 10px;
+    margin-top: 50px;
+  } 
+
+
+  .clubsContainer {
+    display: grid;
+    grid-gap: 20px;
+    width: 90%;
+    height: 200%;
+    position: absolute;
+    transform: translate(5%, 15%);
+    cursor: pointer;
+  }
+
+  .child {
+
+    font-size: 0.8rem;
+
+  }
+
+  .club_content{
+    position: fixed; /* Fixed position to cover the entire viewport */
+    width: 95%!important;
+
+  }
+
+}
+
+
+.centered {
+  background-color: #772b2b;
+  position: relative;
+  width: 100%;
+  height: 20vw;
+  margin-top: 50px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  background-position: 50% 70%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.elements {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  transition: all 0.4s ease;
+  
+}
+
+
+
+.centered:hover {
+  transform: translateY(-5px)!important;
+  color: #4e0502;
+}
+
+.centered :not(:hover) {
+  transform: translateY(0px);
+
+}
+
+.child {
+  z-index: 200;
+  position: absolute;
+  margin-top: 50%;
+  width: 100%;
+  bottom: 0!important;
+  background-color: wheat;
+  font-size: 1rem;
+  text-align: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+}
+
+.go-to-top-button {
+  position: relative;
+  bottom: 0%;
+  width: 100%;
+  color: white;
+  background-color: transparent;
+  border: none;
+  background-color: rgb(82, 77, 77);
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.go-to-top-button img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.go-to-top-button:hover {
+  opacity: 0.8;
+}
+
+
+.clubclicked{
+  background-color: rgba(0, 0, 0, 0.582); /* Semi-transparent black background */
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: fixed; /* Fixed position to cover the entire viewport */
+  z-index: 9999; /* Higher z-index to ensure it appears above other content */
+}
+
+.club_content{
+  position: fixed; /* Fixed position to cover the entire viewport */
+  width: 40%;
+  height: 100%;
+  background-color: wheat;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.club_info {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+}
+
+.club_info img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.description {
+  position: absolute;
+  width: 100%;
+  height: 60%;
+  margin-left: 20px;
+}
+
+.description h2 {
+  margin-top: 20px;
+  font-size: 2rem;
+}
+
+.description p {
+  margin-bottom: 20px;
+}
+
+.facebook_icon{
+  height: 30px;
+  width: auto;
+  margin-left: 50px;
+}
+
+
+/* Exit Button */
+.exit{
+  position: absolute;
+  width: auto;
+  height: 2rem;
+  right: 10px;
+  cursor: pointer;
+  z-index: 50;
+  top: 1rem;
+  background-color: gainsboro;
+  border-radius: 50%;
+}

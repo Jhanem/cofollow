@@ -1,0 +1,113 @@
+/* Media Query for Mobile Devices */
+@media only screen and (max-width: 600px) {
+    body {
+        position: relative;
+        background: url('/Images/rodelsa.jpg') center center fixed;
+        background-color: rgb(80, 77, 77);
+        background-size: cover;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        font-family: 'Kanit', sans-serif;
+        
+    }
+
+    /* Add an overlay to darken the background image */
+    body::after {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    .forgotpassword {
+        padding: 5%; /* Reduce padding for smaller screens */
+        top: 50%; /* Center vertically */
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -50%); /* Center the element */
+        width: 80%; /* Adjust width to fit smaller screens */
+    }
+
+    .forgotpassword input[type="email"] {
+        width: 90%;
+    }
+
+    .nav-links a {
+        text-decoration: none; /* Remove underline */
+        margin-right: .2rem;
+        font-size: .8rem;
+        color: white; /* Inherit color from parent */
+    }
+
+    .nav-links {
+        white-space: nowrap;
+        margin-right: .2rem;
+    }
+
+    .logo {
+        color: white;
+        font-size: 1.2rem; /* Adjusted for mobile */
+        margin-left: 1rem; /* Adjusted for mobile */
+    }
+
+    .terms{
+        margin-top: 10%!important;
+    }
+    /* Sign-Up Title Styles */
+    .signuptitle {
+        font-size: 2.1rem;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        margin: 2rem 0; /* Adjust margin as needed */
+        position: relative;
+        top: -30%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: "League Spartan", sans-serif;
+        white-space: nowrap; /* Prevent text from wrapping */
+    }
+
+    /* Widget Container Styles */
+    .widget-container {
+        padding: 4%;
+        width: 90%; /* Adjusted for mobile */
+        max-width: 300px; /* Adjusted for mobile */
+        border-radius: 10px;
+        position: absolute;
+        top: 15%; /* Adjusted for mobile */
+        left: 48.6%;
+        transform: translateX(-50%);
+        z-index: 10;
+    }
+
+
+    /* Input Styles */
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"] {
+        width: 80%;
+        padding: 10px;
+        margin: 8px 0;
+
+    }
+
+    /* Sign-Up Button Styles */
+
+    button.signupbtn:hover {
+        background-color: #574e4e;
+    }
+
+
+
+    /* Error Styles */
+    #emailError,
+    #passwordError,
+    #confirmPasswordError,
+    #phoneError {
+        color: red;
+        font-size: 13px;
+    }
+}

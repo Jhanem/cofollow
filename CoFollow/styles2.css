@@ -1,0 +1,170 @@
+.about {
+    position: absolute;
+    color: white;
+    width: 100%;
+    height: auto;
+    z-index: 990;
+    top: 100%;
+    font-family: 'Kanit', sans-serif;
+    background: linear-gradient(to top, rgb(216, 175, 64), rgb(207, 66, 48));
+}
+
+.ourservices {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    position: relative;
+    margin-top: 10%;
+    background-color: rgba(138, 11, 11, 0.897);
+    /* Add this to make sure the button is positioned relative to the .ourservices class */
+}
+
+.abouth1::after {
+    content: "";
+    position: absolute;
+    bottom: -5%;
+    left: 25%;
+    text-align: center;
+    width: 50%;
+}
+
+
+.abouth1 {
+    text-align: center;
+    margin-top: 0;
+    font-size: 5vw;
+    position: relative;
+}
+
+.section1 {
+    width: 50%;
+    left: 5%;
+    font-size: 2px;
+    position: relative;
+    text-align: justify;
+    border-bottom: 0.2vw solid;
+}
+
+.section2 {
+    width: 50%;
+    position: relative;
+    left: 5%;
+    text-align: left;
+    margin-top: 5%;
+    border-bottom: 0.2vw solid;
+}
+
+.section3{
+    width: 50%;
+    position: relative;
+    left: 5%;
+    text-align: left;
+    margin-top: 5%;
+
+}
+
+.section2, .section1, .section3 {
+    position: relative;
+    
+}
+
+.imgsection2 {
+    width: auto;
+    height: 30vw;
+    top: 20%;
+    right: 5%;
+    position: absolute;
+    overflow: hidden;
+}
+
+.section1 h2,
+.section2 h2,
+.section3 h2 {
+    font-size: 3.3vw;
+    margin-top: 2px;
+    margin-bottom: 2vw;
+}
+
+.section1 p,
+.section2 p,
+.section3 p {
+    font-size: 1.7vw;
+    position: relative;
+    padding-top: 1vw;
+}
+
+
+.calendar,
+.clubs,
+.sms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+    cursor: default;
+    background-color: rgb(177, 102, 16);
+    transition: transform 0.3s ease; /* Add transition for smooth lifting effect */
+}
+
+/* Hover effect */
+.calendar:hover,
+.clubs:hover,
+.sms:hover {
+    color: #ffffff;
+    transform: translateY(-5px); /* Lift the element slightly on hover */
+}
+
+.calendar, .clubs, .sms p {
+    text-align: center;
+}
+
+.calendarimg,
+.clubimg,
+.smsimg {
+    width: 80px; /* Adjusted width */
+    height: 80px; /* Adjusted height */
+    margin-bottom: 20px;
+}
+
+.moreinfoimg1 {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    position: absolute;
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center the element */
+}
+
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); /* Adjusted width */
+    grid-gap: 20px;
+    position: relative;
+}
+
+.back {
+    height: auto; /* Adjust the height automatically based on content */
+    padding: 10px 20px; /* Adjust padding to control button size */
+    background-color: #e00d0d;
+    border: none;
+    margin-top: 5%;
+    position: relative;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.back h3 {
+    margin: 0;
+    color: #fff;
+    font-size: 18px;
+}
+
+.back:hover {
+    background-color: #333;
+}

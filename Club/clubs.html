@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="/Images/Logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=League+Spartan:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="elements.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="settings.css">
+    <link rel="stylesheet" href="clubs.css">
+    <link rel="stylesheet" href="searchbox.css">
+    <title>CoFollow</title>
+</head>
+<body>
+    <header id="header">
+        <div class="logo">
+            <b><a class="title" href="/CoFollowDashboard/" >CoFollow</a></b>
+            <b><a>| </a><a> Clubs</b> </a>
+        </div>
+        <div class="settings-widget">
+            <button id="settings-btn">
+                <img src="icons/down.png" alt="Down Arrow" class="down-icon">
+            </button>
+            <div class="dropdown-content" id="dropdown-content">
+                <a href="#">
+                    <img src="icons/user.png" alt="User" width="15" height="19">
+                    Profile
+                </a>
+                <a href="#">
+                    <img src="icons/settings.png" alt="Settings" width="15" height="19">
+                    Settings
+                </a>
+                <a href="#">
+                    <img src="icons/logout.png" alt="Logout" width="15" height="19">
+                    Log-out
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <div class="searchbox">
+        <h2>Search clubs:</h2>
+        <input type="text" id="searchBox" placeholder="Search...">
+      
+        <button class="search-button" onclick="searchClubs()">
+          <img src="/Clubs/icons/search.png" alt="Search">
+      </button>
+    </div>
+      
+    <div id="searchResults" class="searchResults"></div>
+
+
+
+    <div class="clubsContainer">
+        
+        
+        <div id="element1" class="centered" data-aos="fade-up" style="background-image: url('/Clubs/Images/galere.jpg')">
+
+            <div class="elements">
+
+                <div class="child">
+                    <h2>Galere Club</h2>
+
+                </div>
+                
+                
+            </div>
+        </div>
+    
+        <div id="element2" class="centered" data-aos="fade-up" style="background-image: url('/Clubs/Images/geeclub.jpg')">
+            
+            <div class="elements">
+
+                <div class="child">
+                    <h2>Liceo U High School Glee Club</h2>
+                    <p style="display: none;"></p>
+                </div>
+            </div>
+        </div>
+    
+        <div id="element3" class="centered" data-aos="fade-up" style="background-image: url('/Clubs/Images/motion.jpg')">
+            <div class="elements">
+
+                <div class="child">
+                    <h2>Liceo U SHS Motion Ensemble</h2>
+                    <p style="display: none;">Dance to express not to impress</p>
+                </div>
+            </div>
+        </div>
+    
+        <div id="element4" class="centered" data-aos="fade-up" style="background-image: url('/Clubs/Images/hiraya.jpg')">
+            <div class="elements">
+
+                <div class="child">
+                    <h2>Liceo U SHS Hiraya Music Club</h2>
+                    <p style="display: none;"></p>
+                </div>
+            </div>
+        </div>
+    
+        <div id="element5" class="centered" data-aos="fade-up" style="background-image: url('/Clubs/Images/teatro.jpg')">
+            <div class="elements">
+
+                <div class="child">
+                    <h2>BTS Buhay Teatro at Sining</h2>
+                    <p style="display: none;">Where creativity shines and never stops.</p>
+                </div>
+            </div>
+        </div>
+    
+        <div id="element6" class="centered" data-aos="fade-up" style="background-image: url('/Clubs/Images/troupe.jpg')">
+            <div class="elements">
+
+                <div class="child">
+                    <h2>Folkloric Dance Troupe-SHS</h2>
+                    <p style="display: none;"></p>
+                </div>
+            </div>
+        </div>
+    
+        <div id="element7" class="centered" data-aos="fade-up" style="background-image: url('/Clubs/Images/marching.jpg')">
+            <div class="elements">
+
+                <div class="child">
+                    <h2>Liceo U SHS-Marching Band</h2>
+                    <p style="display: none;"></p>
+                </div>
+            </div>
+        </div>
+    
+        <div id="element8" class="centered" data-aos="fade-up" style="background-image: url('/Clubs/Images/siyensya.jpg')">
+            <div class="elements">
+
+                <div class="child">
+                    <h2>The Siyensiya Club</h2>
+                    <p style="display: none;"></p>
+                </div>
+            </div>
+        </div>
+    
+        <div id="element9" class="centered" data-aos="fade-up" style="background-image: url('/Clubs/Images/maes.jpg')">
+            <div class="elements">
+
+                <div class="child">
+                    <h2>Math Enthusiasts Society Club</h2>
+                    <p style="display: none;">Join the Math Enthusiasts Society Club and embark on an exciting journey of numbers and equations with us. </p>
+                </div>
+            </div>
+        </div>
+    
+        <div id="element10" class="centered" data-aos="fade-up" style="background-image: url('/Clubs/Images/circle.jpg')">
+            <div class="elements">
+
+                <div class="child">
+                    <h2>Debate Circle - SHS Main</h2>
+                    <p style="display: none;"></p>
+                </div>
+            </div>
+        </div>
+    
+        <div id="element11" class="centered" data-aos="fade-up" style="background-image: url('/Clubs/Images/enthusiast.jpg')">
+            <div class="elements">
+
+                <div class="child">
+                    <h2>Liceo U SHS - Music Enthusiasts</h2>
+                    <p style="display: none;"></p>
+                </div>
+            </div>
+        </div>
+    
+        <div id="element12" class="centered"data-aos="fade-up" style="background-image: url('/Clubs/Images/liceco.jpg')">
+            <div class="elements"  >
+
+                <div class="child">
+                    <h2> Lic-ECO</h2>
+                    <p style="display: none;"> Kalicean. Kalikasan. Kinabukasan ng Licean.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="element13" class="centered" data-aos="fade-up" style="background-image: url('/Clubs/Images/sportsclub.jpg')">
+            <div class="elements"  >
+
+                <div class="child">
+                    <h2>  LDCU SHS Sports Club</h2>
+                    <p style="display: none;"></p>
+                </div>
+            </div>
+        </div>
+
+        <button id="go-to-top-button" data-aos="fade-up" class="go-to-top-button">
+            <img src="/Clubs/icons/uparrow.png" alt="Go to top">
+            <h2>Back to top</h2>
+        </button>
+
+    </div>
+
+    <div class="clubclicked" style="display: none;">
+        <div class="club_content">
+          <img id="exit" class="exit" src="icons/no.png" alt="Close">
+          <div class="club_info">
+            <div class="image">
+              <img src="" alt="Club logo image">
+            </div>
+          </div>
+          <div class="description">
+            <h2></h2>
+            <p></p>
+            <div>
+              <h2>Visit their page</h2>
+              <img class="facebook_icon" src="/Clubs/icons/facebook-icon.png" alt="Facebook">
+              <div id="clubLinks">
+                <a href="" target="_blank"></a>
+              </div>
+              
+
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <script src="clubs.js"></script>
+    <script src="clubclick.js"></script>
+    <script src="searchbox.js"></script>
+    <script src="settings.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script>
+
+      function displayClubName(clubName) {
+        var display = document.getElementById('display');
+        display.textContent = clubName;
+      }
+    </script>
+    
+</body>
+</html>  

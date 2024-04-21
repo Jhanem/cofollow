@@ -1,0 +1,44 @@
+.container {
+    display: grid;
+    gap: 20px;                              /* Add spacing between elements */
+    position: relative;
+    top: 60%;                               /* Center vertically */
+    left: 50%;                              /* Center horizontally */
+    transform: translate(-50%, -50%);       /* Offset for correct centering */
+    width: 80%;                            /* Expand to viewport width */
+  }
+
+  
+  .box:nth-child(1) {
+    background-color: red;
+    height: 180px;
+    width: 90%;
+    align-self: start;   /* Align box to the start (top) */
+  }
+
+  .box:nth-child(2) {
+    background-color: green;
+    align-self: center;  /* Align box to the center */
+    height: 30vw;
+  }
+  
+  .box:nth-child(3) {
+    background-color: blue;
+    align-self: end;     /* Align box to the end (bottom) */
+    height: 50px;
+}
+
+h2{
+  margin-top: -70px;
+  position: absolute;
+  color:white;
+  font-size: 3rem;
+}
+
+.recent-messages {  /* New class for the paragraph section */
+  text-align: right;  /* Align text to the right */
+}
+
+.recent-messages {  /* New class for the paragraph section */
+  text-align: right;  /* Align text to the right */
+}

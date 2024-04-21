@@ -1,0 +1,264 @@
+/* Body Styles */
+body {
+    position: relative;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    cursor: default;
+    font-family: 'Kanit', sans-serif;
+}
+
+/* Add an overlay to darken the background image */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(247,138,14);
+    background: linear-gradient(to top, rgba(202, 113, 12, 0.897), rgb(204, 52, 32));
+}
+
+
+/* Navigation Styles */
+header {
+    display: flex;
+    width: 100%;
+    top: 0;
+    height: 60px; /* Adjusted for mobile */
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    z-index: 90;
+}
+
+      
+header a {
+    text-decoration: none; /* Remove underline */
+    margin-right: 10px; /* Adjusted for mobile */
+    color: white; /* Inherit color from parent */
+}
+
+.a2:hover {
+    color: #0099ff;
+}
+
+.nav-links {
+    white-space: nowrap;
+    margin-right: 1%;
+    font-size: 18px;
+}
+
+.logo {
+    color: white;
+    font-size: 25px; /* Adjusted for mobile */
+    position: relative;
+    margin-left: 30px; /* Adjusted for mobile */
+    white-space: nowrap;
+}
+
+
+
+/* Sign-Up Title Styles */
+.signuptitle {
+    font-size: 4.5rem; /* Adjusted for mobile */
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 0%;
+    color: rgb(252, 252, 252);
+    font-family: "League Spartan", sans-serif;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+
+
+/* Widget Container Styles */
+.widget-container {
+    margin: auto;
+    padding: 4%;
+    background: linear-gradient(to bottom, rgb(143, 57, 57), rgba(255, 153, 0, 0));
+    width: auto; /* Adjusted for mobile */
+    border-radius: 10px;
+    position: absolute;
+    top: 10%; /* Adjusted for mobile */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+
+form{
+    left: 50%;
+    transform: translateX(10%);
+}
+
+/* Input Styles */
+input[type="email"],
+input[type="password"]{
+    width: 20rem;
+    padding: 10px; /* Reduce padding */
+    margin: 8px 0;
+    border: none; /* Remove border */
+    border-bottom: 1px solid #ffffff; /* Add underline */
+    background-color: transparent; /* Make background transparent */
+    outline: none; /* Remove default focus outline */
+    font-size: 1.2rem;
+    color: white;
+}
+
+/* Optional: Adjust focus styles */
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus {
+    border-bottom: 3px solid rgb(255, 255, 255); /* Change underline color on focus */
+}
+
+
+/* Terms Styles */
+.terms {
+    color: #ffffff;
+    cursor: pointer;
+    z-index: 20;
+    position: relative;
+    margin-top: 10%!important;
+}
+
+.terms a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from parent */
+    margin-top: 10%!important;
+}
+
+.terms:hover{
+    color: rgb(42, 25, 194);
+}
+
+/* Label Styles */
+label {
+    color: white;
+    font-size: 1.5rem; /* Adjusted for mobile */
+}
+
+/* Sign-Up Button Styles */
+.signupbtn {
+    font-family: 'Kanit', sans-serif;
+    font-size: 1rem; /* Adjusted for mobile */
+}
+
+::placeholder{
+    font-size: 1rem;
+    color: white;
+}
+
+.signupbtn {
+    display: block;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 5px 14px;
+    border-radius: 25px;
+    cursor: pointer;
+    left: 25%;
+    width: 30%;
+    position: relative;
+    border: none; /* Remove the border */
+    transition: background-color 0.2s ease, color 0.2s ease; /* Add transitions for color change */
+}
+
+.signupbtn:hover {
+    background-color: rgb(219, 190, 61); /* Lighten the background on hover */
+    color: rgb(255, 255, 255); /* Darken the text color on hover */
+}
+
+
+
+.forgotpassword {
+    position: relative; /* Use fixed positioning if you want the element to be positioned relative to the viewport */
+    padding: 10%;
+    top: 10%;
+    left: 50%; /* Center the element horizontally */
+    transform: translateX(-50%); /* Adjust the transform to center the element */
+    z-index: 15;
+    border-radius: 20px;
+    flex-direction: column;
+    display: none;
+    background: rgb(226, 211, 211);
+}
+
+.exitbutton{
+    position: absolute;
+    width: auto;
+    height: 2rem;
+    cursor: pointer;
+    top: 1rem;
+    right: 1.5rem;
+    
+}
+
+.forgotpassword label {
+    font-size: 1.2rem;
+    color: #000000;
+    margin-bottom: 0.5rem;
+}
+
+.forgotpassword input[type="email"] {
+    height: 3rem;
+    padding: 0 1rem;
+    font-size: 1.3rem;
+    border-radius: 0.25rem;
+    color: black;
+    font-family: 'Kanit', sans-serif;
+    border: 1px solid #000000;
+}
+
+.forgotpassword input[type="submit"] {
+    height: 3rem;
+    width: 10rem; /* Adjust the width as needed */
+    margin-top: 1rem;
+    border-radius: 0.25rem;
+    border: none;
+    /* Remove or adjust the transform property */
+    background-color: #ffffff;
+    color: rgb(12, 12, 12);
+    cursor: pointer;
+    font-family: 'Kanit', sans-serif;
+    font-size: 18px;
+}   
+
+.forgotpassword input[type="submit"]:hover {
+    background-color: #7e7e77;
+}
+
+
+.footer p {
+    text-align: center;
+    width: 100%;
+}
+
+
+
+/* Error Styles */
+#emailError,
+#passwordError {
+    color: red;
+    font-size: 1rem; /* Adjusted for mobile */
+    margin-left: 1.2rem;
+}
+
+input.invalid {
+    border-bottom: 3px solid rgb(255, 0, 0) !important; /* Change underline color on focus */
+    z-index: 30;
+}
+
+input.invalidinput {
+    border: 0.1rem solid rgb(255, 0, 0) !important; /* Change underline color on focus */
+    z-index: 30;
+}
+
+#Error{
+    color: red;
+    font-size: 1.3rem;
+    position: absolute;
+}
