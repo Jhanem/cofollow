@@ -1,40 +1,3 @@
-<?php
-// Establish connection to MySQL database
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "calendar";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-// Process form submission
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Retrieve form data
-    $todo_date = $_POST['month'] . '-' . $_POST['day'] . '-' . $_POST['year'];
-    $todo_title = $_POST['set_title'];
-    $todo_description = $_POST['setdesc'];
-    
-
-    // Prepare SQL statement
-    $sql = "INSERT INTO todolists (todo_date, todo_title, todo_description) VALUES ('$todo_date', '$todo_title', '$todo_description')";
-
-    // Execute SQL statement
-    if ($conn->query($sql) === TRUE) {
-        echo "New record created successfully";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
-}
-
-// Close database connection
-$conn->close();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -102,45 +65,67 @@ $conn->close();
                         <div class="slide_1">
                             <div class="slide-content">
                                 <h2 id="currentmonth">Month of </h2>
-                                <div class="element" id="testelement" style="background-image: url('');">
-                                    <h3>GRADE 12 TVL-ICT<br>Final Defense</h3>
-                                    <div id="datedata" class="datedata">
-                                        <h4>April 15~19, 2024</h4>
-                                    </div>
-                                </div>
-                                <div class="element" style="background-image: url('https://www.lumina.com.ph/assets/news-and-blogs-photos/Why-Do-We-Celebrate-Araw-ng-Kagitingan-in-the-Philippines/Why-Do-We-Celebrate-Araw-ng-Kagitingan-in-the-Philippines.webp');">
+                                <?php
+                                include 'connection.php';
 
-                                    <h3>Araw ng Kagitingan</h3>
+                                $sql = "SELECT * FROM `events`"; // Assuming 'events' is the name of your table
+                                $result = $conn->query($sql);
+
+                                if ($result && $result->num_rows > 0) {
+                                    while ($row = $result->fetch_assoc()) {
+                                ?>
+                                <div class="element" id="testelement" style="background-image: url('');">
+                                    <h3><?php echo $row['event_name']; ?></h3>
                                     <div id="datedata" class="datedata">
-                                        <h4>April 9, 2024</h4>
-                    
+                                        <h4><?php echo $row['event_date']; ?></h4>
                                     </div>
                                 </div>
+                                <?php
+                                    }
+                                } else {
+                                    echo "No events found";
+                                }
+                                ?>
                             </div>
                         </div>
                     </div>
-            
+                    <?php 
+                    include 'connection.php';
+
+                    $sql = "SELECT * FROM `todolists`";
+                    $result = $conn->query($sql);
+
+                    if (!$result) {
+                        die("Error executing the query: " . $conn->error);
+                    }
+
+                    ?>
+
                     <div class="scrollable-section inner">
                         <div class="slide_2" style="display: none;">
                             <div class="slide-content">
                                 <h2>Your to-do-list</h2>
-                                <div class="element" id="elementid_#1">
-                                    <h3>PAPEL NAKO SA<br>Final Defense</h3>
-                                    <div id="datedata" class="datedata">
-                                        <h4>April 15~19, 2024</h4>
+                                <?php
+                                if ($result->num_rows > 0) {
+                                    while ($row = $result->fetch_assoc()) {
+                                ?>
+                                <div class="element" id="elementid_<?php echo $row['todo_id']; ?>">
+                                    <h3><?php echo $row['todo_title']; ?><br><?php echo $row['todo_description']; ?></h3>
+                                    <div class="datedata">
+                                        <h4><?php echo $row['todo_date']; ?></h4>
                                     </div>
                                 </div>
-                                <div class="element" id="elementid_#2">
-                                    <h3>PAPEL NAKO SA<br>Final Defense</h3>
-                                    <div id="datedata" class="datedata">
-                                        <h4>April 15~19, 2024</h4>
-                                    </div>
-                                </div>
-
-
+                                <?php
+                                    }
+                                } else {
+                                    echo "No to-do items found";
+                                }
+                                ?>
                             </div>
                         </div>
                     </div>
+
+
             
                 </div>
             </div>
@@ -148,22 +133,36 @@ $conn->close();
 
         <div class="right_container" id="right_container1" >
             <img id="exit3" class="exit" src="icons/no.png" alt="">
+            <?php
+            include 'connection.php';
+
+            $sql = "SELECT * FROM `events`"; // Assuming 'events' is the name of your table
+            $result = $conn->query($sql);
+
+            if ($result && $result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+            ?>
             <div class="calendar1" id="calendar1">
                 <img src="" alt="">
-                <h1 id="title_eventdesc">GRADE 12 TVL-ICT Final Defense</h1>
-                <h2>April 15~19, 2024</h2>
+                <h1 id="title_eventdesc"><?php echo $row['event_name']; ?></h1>
+                <h2><?php echo $row['event_date']; ?></h2>
             </div>
             <div class="calendar1" id="calendar2">
                 <div class="event_description">
                     <div class="description">
                         <h1>Description</h1>
-                        <p></p>
+                        <p><?php echo $row['event_description']; ?></p>
                     </div>
                 </div>
             </div>
+            <?php
+                }
+            } else {
+                echo "No events found";
+            }
+            ?>
         </div>
-
-
+        
         <div class="right_container">
             <div class="calendar">
                 <div class="calendar-content">
@@ -231,7 +230,7 @@ $conn->close();
             <img id="exit1" class="exit" src="icons/no.png" alt="">
             <h1>To Do List</h1>
             <div class="form_eventcon">
-                <form id="form_user" action="calendar.php" method="post" >
+                <form action="todo.php" method="post" >
                     <div class="date">
                         <label><h5>Date:</label>
                         <input type="number" autocomplete="off" name="month" id="month" min="1" max="12" placeholder="MM" oninput="limitDigits(this, 2); validateInput(this, 1, 12, 'Month');">
@@ -243,7 +242,7 @@ $conn->close();
                     <input name="set_title" id="set_title" autocomplete="off">
                     <label for="setdesc"><h5>Your To-do-List here</label>
                     <div> 
-                        <textarea class="setdesc" id="setdesc" ></textarea>
+                        <textarea class="setdesc" id="setdesc" name="setdesc" ></textarea>
                     </div>
                     <div type="submit" value="submit" id="upload1" class="ToDolist">
                         <button type="submit">SET TO-DO-LIST</button>
